@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Theory Inspired Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles can be added here */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <header class="bg-gray-800 p-2 rounded-lg fixed top-0 left-1/2 transform -translate-x-1/2 z-10 shadow-lg transition-all duration-300" id="navbar">
+        <nav class="flex space-x-4">
+            <button class="text-white hover:bg-gray-700 rounded p-2 transition duration-300" onclick="scrollToSection('home')" title="Home">
+                <i class="fas fa-home fa-sm"></i>
+                <span>Home</span>
+            </button>
+            <button class="text-white hover:bg-gray-700 rounded p-2 transition duration-300" onclick="scrollToSection('about')" title="About Me">
+                <i class="fas fa-user fa-sm"></i>
+                <span>About</span>
+            </button>
+            <button class="text-white hover:bg-gray-700 rounded p-2 transition duration-300" onclick="scrollToSection('education')" title="Education">
+                <i class="fas fa-graduation-cap fa-sm"></i>
+                <span>Education</span>
+            </button>
+            <button class="text-white hover:bg-gray-700 rounded p-2 transition duration-300" onclick="scrollToSection('projects')" title="Projects">
+                <i class="fas fa-project-diagram fa-sm"></i>
+                <span>Projects</span>
+            </button>
+            <button class="text-white hover:bg-gray-700 rounded p-2 transition duration-300" onclick="scrollToSection('contact')" title="Contact">
+                <i class="fas fa-envelope fa-sm"></i>
+                <span>Contact</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="scroll-container mt-16">
+        <section id="home" class="hero bg-cover bg-center h-screen flex flex-col items-center justify-center text-center" style="background-image: url('path/to/your/background-image.jpg');">
+            <h1 class="text-7xl font-extrabold text-white drop-shadow-lg">Welcome to My Portfolio, I'm Tom Jose Biju</h1>
+            <p class="mt-4 text-xl text-gray-300 drop-shadow-md">I am a passionate developer creating innovative solutions.</p>
+            <p class="mt-2 text-md text-gray-400 drop-shadow-md">Explore my projects and skills, and feel free to reach out for collaborations or inquiries.</p>
+            <a href="CV_BIJU_TOMJOSE.pdf" class="mt-6 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300" download>Download My Resume</a>
+            <div class="flex space-x-6 mt-4">
+                <a href="www.linkedin.com/in/tom-jose-biju" class="text-blue-500 hover:text-blue-700 transition duration-300" target="_blank">
+                    <i class="fab fa-linkedin fa-3x transform hover:scale-110 transition-transform duration-300"></i>
+                </a>
+                <a href="https://github.com/Tom-Jose-Biju" class="text-gray-600 hover:text-blue-500 transition duration-300" target="_blank">
+                    <i class="fab fa-github fa-3x transform hover:scale-110 transition-transform duration-300"></i>
+                </a>
+                <a href="https://www.instagram.com/__.t_.o._m._/profilecard/?igsh=dDA0Y2FhZzM0NjEw" class="text-pink-500 hover:text-pink-700 transition duration-300" target="_blank">
+                    <i class="fab fa-instagram fa-3x transform hover:scale-110 transition-transform duration-300"></i>
+                </a>
+            </div>  
+        </section>
+
+        <section id="about" class="p-12 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-lg shadow-lg mt-10">
+            <div class="text-center mb-10">
+              <h2 class="text-4xl font-bold text-white mb-2">About Me</h2>
+              <p class="text-lg text-gray-400">Passionate Web Developer & Lifelong Learner</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div class="relative flex justify-center">
+                <div class="overflow-hidden rounded-lg shadow-2xl">
+                  <img src="mmm.jpg" alt="My Image" class="w-full max-w-sm transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                </div>
+              </div>
+              <div>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                  I am a highly motivated fresher with a strong foundation in web development. My expertise lies in creating dynamic, user-friendly websites using technologies like HTML, CSS, and JavaScript. I am also proficient in frameworks like React and Django, enabling me to build scalable and efficient web applications.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                  Beyond coding, I am committed to continuous learning and growth. I embrace challenges, see every project as a learning opportunity, and stay updated with the latest tech trends to refine my skills and create impactful web solutions.
+                </p>
+              </div>
+            </div>
+          
+            <div class="mt-16">
+              <h3 class="text-3xl font-bold text-white text-center mb-8">My Skills</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-html5 fa-2x text-orange-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">HTML</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-css3-alt fa-2x text-blue-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">CSS</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-js fa-2x text-yellow-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">JavaScript</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-react fa-2x text-blue-400 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">React</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-python fa-2x text-blue-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">Django</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-sass fa-2x text-pink-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">SCSS</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-node fa-2x text-green-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">Node.js</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fas fa-mobile-alt fa-2x text-purple-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">Responsive Design</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fab fa-git-alt fa-2x text-red-500 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">Git</h4>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                  <i class="fas fa-paint-brush fa-2x text-yellow-300 mb-2"></i>
+                  <h4 class="text-lg font-semibold text-white">UI/UX Design</h4>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mt-16 text-center">
+              <h3 class="text-3xl font-bold text-white mb-8">Interests</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                  <i class="fas fa-laptop-code fa-2x text-blue-400 mb-2"></i>
+                  <h4 class="text-2xl font-semibold text-blue-400">Technology Exploration</h4>
+                  <p class="text-lg text-gray-300 leading-relaxed">
+                    I love exploring new technologies like AI, blockchain, and IoT. I enjoy experimenting with new frameworks and tools to enhance my skills.
+                  </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                  <i class="fas fa-hiking fa-2x text-blue-400 mb-2"></i>
+                  <h4 class="text-2xl font-semibold text-blue-400">Outdoor Activities</h4>
+                  <p class="text-lg text-gray-300 leading-relaxed">
+                    Hiking and nature photography are my go-to activities for relaxation. I find inspiration in the beauty of the outdoors.
+                  </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                  <i class="fas fa-utensils fa-2x text-blue-400 mb-2"></i>
+                  <h4 class="text-2xl font-semibold text-blue-400">Cooking</h4>
+                  <p class="text-lg text-gray-300 leading-relaxed">
+                    I enjoy experimenting with new recipes and cuisines, finding joy in creating delicious meals for family and friends.
+                  </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                  <i class="fas fa-dumbbell fa-2x text-blue-400 mb-2"></i>
+                  <h4 class="text-2xl font-semibold text-blue-400">Gym and Workout</h4>
+                  <p class="text-lg text-gray-300 leading-relaxed">
+                    Staying fit is important to me, and I enjoy regular workouts at the gym, focusing on strength training and cardio.
+                  </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl">
+                  <i class="fas fa-music fa-2x text-blue-400 mb-2"></i>
+                  <h4 class="text-2xl font-semibold text-blue-400">Pianist</h4>
+                  <p class="text-lg text-gray-300 leading-relaxed">
+                    I enjoy playing the piano and exploring various musical genres, finding joy in creating beautiful melodies.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="mt-4 text-4xl font-semibold text-white">Services Offered</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+                <div class="card bg-gray-800 shadow-lg transition-transform transform hover:scale-105">
+                    <div class="card-body">
+                        <h3 class="text-lg font-semibold text-white">Web Development</h3>
+                        <p class="text-gray-300">Building responsive and dynamic websites.</p>
+                    </div>
+                </div>
+                <div class="card bg-gray-800 shadow-lg transition-transform transform hover:scale-105">
+                    <div class="card-body">
+                        <h3 class="text-lg font-semibold text-white">UI/UX Design</h3>
+                        <p class="text-gray-300">Creating user-friendly interfaces and experiences.</p>
+                    </div>
+                </div>
+                <div class="card bg-gray-800 shadow-lg transition-transform transform hover:scale-105">
+                    <div class="card-body">
+                        <h3 class="text-lg font-semibold text-white">Django</h3>
+                        <p class="text-gray-300">Building robust web applications using the Django framework.</p>
+                    </div>
+                </div>
+                <div class="card bg-gray-800 shadow-lg transition-transform transform hover:scale-105">
+                    <div class="card-body">
+                        <h3 class="text-lg font-semibold text-white">Database Management</h3>
+                        <p class="text-gray-300">Ensuring data integrity and optimizing database performance.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="mt-6 inline-block bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition">Get in Touch</a>
+          </section>
+          
+          
+
+        <section id="education" class="section bg-gray-900 p-8">
+            <h2 class="text-5xl font-bold text-center text-white mb-8">Education</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-2xl border-l-4 border-green-500">
+                    <h3 class="text-3xl font-semibold text-white">Masters in Computer Applications</h3>
+                    <p class="text-gray-400"><strong>INTEGRATED MCA @ </strong> Amal Jyothi College of Engineering, 2025</p>
+                    <p class="mt-2 text-gray-300">Relevant Courses: Data Structures, Algorithms, Web Development, Database Management</p>
+                    <p class="mt-2 text-gray-300">Thesis Title: <strong>Automated Product Categorization in E-commerce</strong></p>
+                    <p class="mt-2 text-gray-300">Skills Acquired: <strong>Python, Django, React, Database Management, Web Development</strong></p>
+                    <p class="mt-2 text-gray-300">Internship: <strong>Django Intern at Riss Technologies, Kochi</strong></p>
+                    <p class="mt-2 text-gray-300">Extracurricular: Core committee lead for the <strong>NASA Space Apps challenge 2024</strong>.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-2xl border-l-4 border-blue-500">
+                    <h3 class="text-3xl font-semibold text-white">Higher Secondary</h3>
+                    <p class="text-gray-400">St. John The Baptist's Nedumkunnam, 2020</p>
+                    <p class="mt-2 text-gray-300">Stream: Computer Science</p>
+                    <p class="mt-2 text-gray-300">Passout Marks: 75%</p>
+                    <p class="mt-2 text-gray-300">Achievements: Participated in Arts and cultural competitions.</p>
+                    <p class="mt-2 text-gray-300">Extracurricular: Member of the school debate team.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-2xl border-l-4 border-red-500">
+                    <h3 class="text-3xl font-semibold text-white">High School</h3>
+                    <p class="text-gray-400">St. John The Baptist's Nedumkunnam, 2018</p>
+                    <p class="mt-2 text-gray-300">Achievements: School Leader</p>
+                    <p class="mt-2 text-gray-300">Passout Marks: 90%</p>
+                    <p class="mt-2 text-gray-300">Extracurricular: Active member of the student council.</p>
+                    <p class="mt-2 text-gray-300">Interests: Engaged in sports and cultural activities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section bg-gray-900 p-8">
+            <h2 class="text-5xl font-bold text-center text-white mb-8">Projects</h2>
+            <div class="flex justify-center items-center">
+                <div class="card bg-gray-800 shadow-xl transition-shadow duration-300 hover:shadow-2xl hover:-translate-y-1 max-w-lg">
+                    <img src="ss1.png" alt="Project Image" class="card-img-top rounded-t-lg">
+                    <div class="card-body p-6">
+                        <h3 class="card-title text-3xl font-bold text-white flex items-center">
+                            <i class="fas fa-project-diagram mr-2"></i> Craftsy-Market
+                        </h3>
+                        <p class="text-gray-300">An innovative full-stack marketplace aimed at bridging the gap between skilled artisans and customers seeking unique, handcrafted products.</p>
+                        <ul class="list-disc list-inside my-4 text-gray-400">
+                            <li><i class="fas fa-check-circle mr-2"></i> Built with Django, Python, and SQLite for backend.</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Frontend with HTML, CSS/SCSS, and JavaScript.</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Real-time interactions with AJAX.</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Image classification with Vision Transformer.</li>
+                        </ul>
+                        <div class="flex gap-4">
+                            <a href="https://craftsy-market.onrender.com" class="bg-green-500 text-white py-2 px-4 rounded transition duration-300 hover:bg-green-600 hover:shadow-lg flex items-center">
+                                <i class="fas fa-play mr-2"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Tom-Jose-Biju/Craftsy-Market" class="bg-blue-500 text-white py-2 px-4 rounded transition duration-300 hover:bg-blue-600 hover:shadow-lg flex items-center">
+                                <i class="fas fa-code mr-2"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section bg-gray-800 p-8">
+            <h2 class="text-5xl font-semibold text-center text-white mb-6">Contact Me</h2>
+            <p class="text-lg text-center text-gray-300 mb-4">Feel free to reach out for collaborations or inquiries.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                    <h3 class="text-3xl font-semibold text-white mb-4">Get in Touch</h3>
+                    <p class="text-gray-300 mb-2">Email: 
+                        <a href="mailto:tomjosebiju27@gmail.com" class="text-blue-400 hover:underline">tomjosebiju27@gmail.com</a>
+                    </p>
+                    <p class="text-gray-300 mb-2">Phone: 
+                        <a href="tel:+918304076224" class="text-blue-400 hover:underline">+91 8304076224</a>
+                    </p>
+                    <p class="text-gray-300 mb-4">Location: Karukachal, Kerala, India</p>
+                    <p class="text-gray-300 mb-4">For more inquiries, please fill out my <a href="https://forms.gle/RQuq9jqz9Zffax5X8" class="text-blue-400 hover:underline">Contact Form</a>.</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.990126843152!2d76.66740647587535!3d9.509586581279393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06304ca96e79f5%3A0x55d9c59f521dc076!2sKarukachal%20Manimala%20Rd%2C%20Nedumkunnam%2C%20Kerala%20686542!5e0!3m2!1sen!2sin!4v1735916666904!5m2!1sen!2sin" 
+                  width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer-center p-4 bg-gray-800 text-gray-200">
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleSettings() {
+            const settings = document.getElementById('settings');
+            settings.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/build/three.min.js"></script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background-color: black;
+            color: white;
+        }
+
+        /* New Simple and Sleek Animation */
+        .hero {
+            /*background-image: url('vvv.jpg');*/
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: fadeInScale 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .icon-hover-animate {
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .icon-hover-animate:hover {
+            animation: pulse 1s infinite;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            document.querySelectorAll('.fade-in').forEach((section) => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="fixed top-0 left-0 right-0 z-50 text-center p-5">
+        <nav class="bg-gray-800 p-4 rounded-lg inline-block">
+            <ul class="flex justify-center space-x-8">
+                <li><a href="#about" class="text-white hover:text-blue-500">About Me</a></li>
+                <li><a href="#projects" class="text-white hover:text-blue-500">Projects</a></li>
+                <li><a href="#skills" class="text-white hover:text-blue-500">Skills</a></li>
+                <li><a href="#contact" class="text-white hover:text-blue-500">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <section class="hero min-h-screen flex items-center justify-center">
+            <div class="container mx-auto flex flex-wrap items-center justify-between">
+                <!-- Welcome Text -->
+                <div class="w-full text-center p-8">
+                    <h1 class="text-5xl font-bold mb-5 animate-pulse">Welcome to My Spotlight</h1>
+                    <p class="text-lg mb-8">A passionate web developer crafting sleek and functional experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="CV_BIJU_TOMJOSE.pdf" class="btn btn-primary" target="_blank">My Resume</a>
+                        <!-- <a href="quote.html" class="btn btn-secondary">Check the Quote</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="p-10 bg-gray-900 rounded-lg shadow-lg mt-10 fade-in">
+            <h2 class="text-3xl font-semibold text-center mb-4">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p>I am a fresher eager to begin my career in web development. With a solid foundation in HTML, CSS, and JavaScript, I have gained the necessary skills to create functional and dynamic websites. In addition to these core technologies, I am also working with frameworks and tools like React, Django, and SCSS, which allow me to build more complex, scalable, and efficient web applications. Although I am at the start of my professional journey, I am highly motivated to expand my expertise and grow within the web development field. I believe that every project, no matter how small, is an opportunity to learn and refine my craft.
+
+                        My passion for web development is driven by a desire to build user-friendly, accessible, and engaging web applications. I focus on creating seamless user experiences through intuitive designs and effective coding practices. Whether it's crafting a visually appealing layout with SCSS, building interactive UIs with React, or developing robust back-end systems with Django, I enjoy finding creative solutions that make websites both functional and enjoyable to use.
+                        
+                        When I'm not coding, I dedicate my time to exploring new technologies and keeping up with the latest trends in the field. I take advantage of online courses, tutorials, and personal projects to continue building my skills and stay current with industry standards. This constant pursuit of knowledge helps me stay motivated and inspired to keep improving as a developer.
+                        
+                        </p>
+                </div>
+                <div class="relative flex items-center">
+                    <img src="mmm.jpg" alt="My Image" class="rounded-lg shadow-lg w-full h-auto max-w-xs md:max-w-sm transition-transform transform hover:scale-105 hover:rotate-3 duration-300 ease-in-out">
+                    <div class="absolute top-0 right-0 mt-4 mr-4 flex items-center flex-col gap-2">
+                        <a href="https://www.linkedin.com/yourprofile" class="text-blue-500 hover:text-blue-700" target="_blank">
+                            <i class="fab fa-linkedin fa-3x transform hover:scale-110 hover:rotate-12 transition-transform duration-300"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yourprofile" class="text-pink-500 hover:text-pink-700" target="_blank">
+                            <i class="fab fa-instagram fa-3x transform hover:scale-110 hover:rotate-12 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="projects" class="p-10 bg-gray-900 rounded-lg shadow-lg mt-10 fade-in">
+            <h2 class="text-3xl font-semibold text-center mb-4">Projects</h2>
+            <div class="flex justify-center items-center">
+                <div class="card bg-gray-800 shadow-xl hover:shadow-2xl transition-shadow duration-300 max-w-lg">
+                    <img src="ss1.png" alt="Project Image" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl font-bold">Craftsy-Market</h3>
+                        <p class="text-gray-300">An innovative full-stack marketplace aimed at bridging the gap between skilled artisans and customers seeking unique, handcrafted products.</p>
+                        <ul class="list-disc list-inside my-4 text-gray-400">
+                            <li>Built with Django, Python, and SQLite for backend.</li>
+                            <li>Frontend with HTML, CSS/SCSS, and JavaScript.</li>
+                            <li>Real-time interactions with AJAX.</li>
+                            <li>Image classification with Vision Transformer.</li>
+                        </ul>
+                        <div class="flex gap-4">
+                            <a href="https://craftsy-market.onrender.com" class="btn btn-primary flex items-center justify-center gap-2" target="_blank">
+                                <i class="fas fa-play"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/Tom-Jose-Biju/Craftsy-Market" class="btn btn-secondary flex items-center justify-center gap-2" target="_blank">
+                                <i class="fas fa-code"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="p-10 bg-gray-900 rounded-lg shadow-lg mt-10 fade-in">
+            <h2 class="text-3xl font-semibold text-center mb-8">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <!-- Skill Card for HTML -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fab fa-html5 text-4xl text-red-500 icon-hover-animate"></i>
+                        <p class="badge badge-primary mt-2">HTML</p>
+                        <div class="tooltip tooltip-primary" data-tip="Proficient with HTML5 standards and semantics.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card for CSS -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500 icon-hover-animate"></i>
+                        <p class="badge badge-secondary mt-2">CSS</p>
+                        <div class="tooltip tooltip-secondary" data-tip="Experienced in CSS3 and pre-processors.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card for JavaScript -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fab fa-js-square text-4xl text-yellow-500 icon-hover-animate"></i>
+                        <p class="badge badge-accent mt-2">JavaScript</p>
+                        <div class="tooltip tooltip-accent" data-tip="Skilled in JavaScript and modern frameworks.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card for React -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fab fa-react text-4xl text-sky-500 icon-hover-animate"></i>
+                        <p class="badge badge-info mt-2">React</p>
+                        <div class="tooltip tooltip-info" data-tip="Proficient in React including hooks and state management.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card for Node.js -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fab fa-node-js text-4xl text-green-500 icon-hover-animate"></i>
+                        <p class="badge badge-success mt-2">Node.js</p>
+                        <div class="tooltip tooltip-success" data-tip="Experienced in server-side development with Node.js.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card for Git -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fab fa-git-alt text-4xl text-orange-500 icon-hover-animate"></i>
+                        <p class="badge badge-warning mt-2">Git</p>
+                        <div class="tooltip tooltip-warning" data-tip="Proficient in version control with Git.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card for Responsive Design -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fas fa-mobile-alt text-4xl text-red-600 icon-hover-animate"></i>
+                        <p class="badge badge-error mt-2">Responsive Design</p>
+                        <div class="tooltip tooltip-error" data-tip="Skilled in creating designs that work on any device.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill Card for UI/UX Design -->
+                <div class="card bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                    <div class="card-body">
+                        <i class="fas fa-paint-brush text-4xl text-gray-500 icon-hover-animate"></i>
+                        <p class="badge badge-neutral mt-2">UI/UX Design</p>
+                        <div class="tooltip tooltip-neutral" data-tip="Experienced in UI/UX design principles and tools.">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="p-10 bg-gray-900 rounded-lg shadow-lg mt-10 fade-in">
+            <h2 class="text-3xl font-semibold text-center mb-4">Contact Me</h2>
+            <form class="max-w-lg mx-auto">
+                <!-- Email Field -->
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text">Email</span>
+                    </label>
+                    <input type="email" placeholder="Your email" class="input input-bordered w-full" required />
+                </div>
+                <!-- Phone Field -->
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text">Phone</span>
+                    </label>
+                    <input type="tel" placeholder="Your phone number" class="input input-bordered w-full" required />
+                </div>
+                <!-- Message Field -->
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text">Message</span>
+                    </label>
+                    <textarea placeholder="Your message" class="textarea textarea-bordered w-full" required></textarea>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-full">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="p-4 bg-gray-800 text-center mt-10">
+        <p>&copy; 2023 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

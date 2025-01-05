@@ -1,0 +1,40 @@
+:root {
+    --primary-hue: 210;
+    --primary-saturation: 100%;
+    --primary-lightness: 50%;
+    --shadow-hue: 180;
+    --shadow-lightness: 40%;
+}
+
+body {
+    background-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+    color: hsl(0, 0%, 100%);
+    font-family: 'Cyber', sans-serif;
+}
+
+.section {
+    padding: 100px 0;
+    border-bottom: 1px solid hsl(var(--shadow-hue), 100%, var(--shadow-lightness));
+    transition: background-color 0.3s;
+}
+
+.section:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-link {
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: hsl(var(--primary-hue), 100%, 80%);
+}
